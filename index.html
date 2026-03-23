@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTA Online Services | Premium Modded Accounts & Money</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --primary: #7B3FE4;
+            --primary-glow: rgba(123, 63, 228, 0.4);
+            --bg: #0B0B0F;
+            --card-glass: rgba(25, 25, 30, 0.6);
+            --border-glass: rgba(255, 255, 255, 0.05);
+        }
+
+        body {
+            background-color: var(--bg);
+            color: #E2E8F0;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .heading-font {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Neon Glow Effect */
+        .neon-glow {
+            text-shadow: 0 0 15px var(--primary-glow), 0 0 30px var(--primary-glow);
+        }
+
+        .primary-gradient {
+            background: linear-gradient(135deg, #7B3FE4 0%, #A855F7 100%);
+        }
+
+        .glass-card {
+            background: var(--card-glass);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--border-glass);
+            border-radius: 20px;
+        }
+
+        .glass-nav {
+            background: rgba(11, 11, 15, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-glass);
+        }
+
+        /* Animated Background Particles */
+        .bg-glow-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .bg-glow-1 {
+            position: absolute;
+            top: -10%;
+            right: -5%;
+            width: 50vw;
+            height: 50vw;
+            background: radial-gradient(circle, var(--primary-glow) 0%, transparent 70%);
+            opacity: 0.3;
+            animation: pulse-glow 10s infinite alternate ease-in-out;
+        }
+
+        .bg-glow-2 {
+            position: absolute;
+            bottom: -5%;
+            left: -5%;
+            width: 40vw;
+            height: 40vw;
+            background: radial-gradient(circle, var(--primary-glow) 0%, transparent 70%);
+            opacity: 0.2;
+            animation: pulse-glow 15s infinite alternate-reverse ease-in-out;
+        }
+
+        @keyframes pulse-glow {
+            from { transform: scale(1) translate(0, 0); opacity: 0.2; }
+            to { transform: scale(1.2) translate(5%, 5%); opacity: 0.4; }
+        }
+
+        /* Button Hover Effects */
+        .btn-primary {
+            background: var(--primary);
+            box-shadow: 0 4px 15px rgba(123, 63, 228, 0.3);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(123, 63, 228, 0.5);
+            filter: brightness(1.1);
+        }
+
+        .btn-secondary {
+            border: 1px solid var(--border-glass);
+            background: rgba(255, 255, 255, 0.03);
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--primary);
+        }
+
+        /* Section Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Smooth Nav Hover */
+        .nav-link {
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Text Zoom Animation */
+        .hero-zoom {
+            animation: hero-zoom-in 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @keyframes hero-zoom-in {
+            from { transform: scale(0.95); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0B0B0F;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2D2D35;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary);
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(123, 63, 228, 0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .glass-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Background Glows -->
+    <div class="bg-glow-container">
+        <div class="bg-glow-1"></div>
+        <div class="bg-glow-2"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="text-2xl font-bold heading-font tracking-tight flex items-center gap-2">
+                <span class="text-[#7B3FE4]">GTA</span> <span class="opacity-90">Services</span>
+            </a>
+            
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#hero" class="nav-link text-sm font-medium opacity-80 hover:opacity-100">Home</a>
+                <a href="#about" class="nav-link text-sm font-medium opacity-80 hover:opacity-100">About Me</a>
+                <a href="#contact" class="nav-link text-sm font-medium opacity-80 hover:opacity-100">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Toggle (Simplified) -->
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-btn" class="p-2 opacity-80">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-[#0B0B0F] flex flex-col items-center justify-center gap-8 translate-x-full transition-transform duration-500 md:hidden">
+        <button id="close-menu-btn" class="absolute top-8 right-8">
+            <i data-lucide="x" class="w-8 h-8"></i>
+        </button>
+        <a href="#hero" class="text-3xl font-bold heading-font mobile-link">Home</a>
+        <a href="#about" class="text-3xl font-bold heading-font mobile-link">About Me</a>
+        <a href="#contact" class="text-3xl font-bold heading-font mobile-link">Contact</a>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="relative h-screen flex flex-col items-center justify-center text-center px-6 overflow-hidden">
+        <div class="hero-zoom max-w-4xl mx-auto">
+            <div class="mb-6 inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border-none text-xs font-semibold tracking-widest uppercase text-[#7B3FE4]">
+                <span class="flex h-2 w-2 rounded-full bg-[#7B3FE4] animate-pulse"></span>
+                Status: Online & active
+            </div>
+            
+            <h1 class="text-5xl md:text-8xl font-black mb-6 tracking-tight leading-none neon-glow">
+                GTA Online <span class="text-[#7B3FE4]">Services</span>
+            </h1>
+            
+            <p class="text-lg md:text-2xl opacity-60 mb-4 font-medium italic">
+                Modded Accounts • Money Services • Fast Delivery
+            </p>
+            
+            <p class="text-base md:text-lg opacity-40 mb-10 max-w-2xl mx-auto">
+                Premium, reliable and affordable services for the ultimate GTA experience. Simple and fast process exclusively through our Discord.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="https://discord.gg/qeGYR3Rm6X" target="_blank" class="btn-primary flex items-center gap-2 px-10 py-4 rounded-xl text-white font-bold text-lg group w-full sm:w-auto">
+                    <i data-lucide="message-square" class="w-5 h-5 transition-transform group-hover:scale-110"></i>
+                    Join Discord
+                </a>
+                <a href="#contact" class="btn-secondary px-10 py-4 rounded-xl font-bold text-lg w-full sm:w-auto">
+                    Contact Me
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-20">
+            <i data-lucide="chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-24 px-6 relative">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">About Me</h2>
+                <div class="h-1 w-20 bg-[#7B3FE4] mx-auto rounded-full"></div>
+            </div>
+
+            <div class="glass-card p-8 md:p-12 reveal">
+                <div class="grid md:grid-cols-1 gap-8 text-center md:text-left">
+                    <div>
+                        <p class="text-lg md:text-xl leading-relaxed opacity-80 mb-6">
+                            I specialize in providing high-quality GTA Online services designed for players who want to skip the grind and jump straight into the action. 
+                        </p>
+                        <p class="text-lg md:text-xl leading-relaxed opacity-80">
+                            Whether you need <span class="text-[#7B3FE4] font-semibold">premium modded accounts</span> or <span class="text-[#7B3FE4] font-semibold">significant in-game money boosts</span>, my process is automated for fast delivery and direct communication via Discord. 
+                        </p>
+                        <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+                            <div class="p-4 rounded-xl bg-white/5 border border-white/5">
+                                <i data-lucide="zap" class="w-8 h-8 text-[#7B3FE4] mx-auto mb-3"></i>
+                                <h4 class="font-bold">Fast Delivery</h4>
+                            </div>
+                            <div class="p-4 rounded-xl bg-white/5 border border-white/5">
+                                <i data-lucide="shield-check" class="w-8 h-8 text-[#7B3FE4] mx-auto mb-3"></i>
+                                <h4 class="font-bold">Reliable</h4>
+                            </div>
+                            <div class="p-4 rounded-xl bg-white/5 border border-white/5">
+                                <i data-lucide="headphones" class="w-8 h-8 text-[#7B3FE4] mx-auto mb-3"></i>
+                                <h4 class="font-bold">Direct Support</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-24 px-6 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="glass-card p-12 md:p-20 text-center relative overflow-hidden reveal">
+                <!-- Background Accent for Contact -->
+                <div class="absolute -top-24 -right-24 w-64 h-64 bg-[#7B3FE4]/10 rounded-full blur-[100px]"></div>
+                <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-[#7B3FE4]/10 rounded-full blur-[100px]"></div>
+
+                <div class="relative z-10">
+                    <h2 class="text-4xl md:text-6xl font-bold mb-6">Get Started Today</h2>
+                    <p class="text-xl md:text-2xl opacity-60 mb-12 max-w-2xl mx-auto">
+                        Ready to elevate your game? Open a ticket on our Discord server to get started quickly.
+                    </p>
+                    
+                    <a href="https://discord.gg/qeGYR3Rm6X" target="_blank" class="inline-flex items-center gap-4 btn-primary px-12 py-5 rounded-2xl text-white font-black text-2xl group transition-all">
+                        <i data-lucide="message-square" class="w-8 h-8"></i>
+                        Join Discord
+                    </a>
+                    
+                    <p class="mt-8 text-sm opacity-40 font-medium tracking-wide flex items-center justify-center gap-2">
+                        <i data-lucide="info" class="w-4 h-4"></i>
+                        Average response time: under 5 minutes
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-12 border-t border-white/5 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex flex-col items-center md:items-start gap-4">
+                 <a href="#" class="text-xl font-bold heading-font tracking-tight">
+                    <span class="text-[#7B3FE4]">GTA</span> Services
+                </a>
+                <p class="text-sm opacity-30 text-center md:text-left">
+                    &copy; 2026 GTA Services. All rights reserved.
+                </p>
+            </div>
+            
+            <div class="flex flex-col items-center md:items-end gap-2">
+                <a href="https://discord.gg/qeGYR3Rm6X" target="_blank" class="opacity-40 hover:opacity-100 transition-opacity flex items-center gap-2">
+                    <i data-lucide="message-square" class="w-5 h-5"></i>
+                    Discord Community
+                </a>
+                <p class="text-[10px] uppercase tracking-widest opacity-20 mt-4">
+                    Not affiliated with Rockstar Games
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Reveal Animations on Scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+        // Mobile Menu Logic
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function toggleMenu(show) {
+            if (show) {
+                mobileMenu.style.transform = 'translateX(0)';
+                document.body.style.overflow = 'hidden';
+            } else {
+                mobileMenu.style.transform = 'translateX(100%)';
+                document.body.style.overflow = '';
+            }
+        }
+
+        mobileMenuBtn.addEventListener('click', () => toggleMenu(true));
+        closeMenuBtn.addEventListener('click', () => toggleMenu(false));
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => toggleMenu(false));
+        });
+
+        // Sticky Nav Change on Scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.padding = '0.5rem 0';
+                nav.style.background = 'rgba(11, 11, 15, 0.95)';
+            } else {
+                nav.style.padding = '0';
+                nav.style.background = 'rgba(11, 11, 15, 0.8)';
+            }
+        });
+
+        // Mouse Follow Effect for Hero Glow (Optional Enhancement)
+        const hero = document.getElementById('hero');
+        hero.addEventListener('mousemove', (e) => {
+            const { clientX, clientY } = e;
+            const x = (clientX / window.innerWidth - 0.5) * 20;
+            const y = (clientY / window.innerHeight - 0.5) * 20;
+            
+            // Subtle shift for text
+            const text = hero.querySelector('.hero-zoom');
+            text.style.transform = `translate(${x}px, ${y}px)`;
+        });
+
+    </script>
+</body>
+</html>
